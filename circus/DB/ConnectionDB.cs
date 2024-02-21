@@ -8,6 +8,7 @@ namespace circus.DB
 {
     public class ConnectionDB
     {
-        public static CircusLiana320Entities3 circus = new CircusLiana320Entities3();
+        //public static CircusLiana320Entities circus = new CircusLiana320Entities();
+        public static CircusEntities circus = new CircusEntities();
     }
 }

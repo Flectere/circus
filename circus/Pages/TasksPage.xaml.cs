@@ -21,8 +21,6 @@ namespace circus.Pages
     /// </summary>
     public partial class TasksPage : Page
     {
-        public static List<User> employee { get; set; }
-        public static List<DB.Task> examsSort { get; set; }
         public TasksPage()
         {
             InitializeComponent();

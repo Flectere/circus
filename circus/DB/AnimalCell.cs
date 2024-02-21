@@ -29,8 +29,9 @@ namespace circus.DB
         public Nullable<int> IdTrainer { get; set; }
     
         public virtual Gender Gender { get; set; }
-        public virtual User User { get; set; }
+        public virtual Trainer Trainer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TrainingSchedule> TrainingSchedule { get; set; }
+        public virtual User User { get; set; }
     }
 }

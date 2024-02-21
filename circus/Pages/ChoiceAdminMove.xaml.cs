@@ -30,10 +30,10 @@ namespace circus.Pages
         {
             NavigationService.Navigate(new TasksPage());
         }
+
         private void ScheduleTrainingBt_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new TrainingSchedule());
         }
-
     }
 }

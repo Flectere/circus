@@ -18,6 +18,7 @@ namespace circus.DB
         public Nullable<System.DateTime> Date { get; set; }
         public Nullable<int> IdTraining { get; set; }
         public Nullable<int> IdAnimal { get; set; }
+        public Nullable<bool> done { get; set; }
     
         public virtual AnimalCell AnimalCell { get; set; }
         public virtual Training Training { get; set; }

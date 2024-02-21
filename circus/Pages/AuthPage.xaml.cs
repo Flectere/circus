@@ -43,6 +43,10 @@ namespace circus.Pages
                 {
                     NavigationService.Navigate(new ChoiceAdminMove());
                 }
+                else if (App.currentUser.IdRole == 3)
+                {
+                    NavigationService.Navigate(new TrainingSchedule());
+                }
                 else if (App.currentUser.IdRole == 2)
                 {
                     NavigationService.Navigate(new ArtistSchedulePage());

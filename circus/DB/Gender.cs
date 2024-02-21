@@ -18,6 +18,7 @@ namespace circus.DB
         public Gender()
         {
             this.AnimalCell = new HashSet<AnimalCell>();
+            this.Artist = new HashSet<Artist>();
         }
     
         public int ID { get; set; }
@@ -25,5 +26,9 @@ namespace circus.DB
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AnimalCell> AnimalCell { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Artist> Artist { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Trainer> Trainer { get; set; }
     }
 }

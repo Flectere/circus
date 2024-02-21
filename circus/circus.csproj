@@ -74,15 +74,20 @@
     </Compile>
     <Compile Include="DB\AnimalCell.cs">
       <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>ModelBulat.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Application.cs">
       <DependentUpon>Model3.tt</DependentUpon>
+    <Compile Include="DB\Artist.cs">
+      <DependentUpon>ModelBulat.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ConnectionDB.cs" />
     <Compile Include="DB\Gender.cs">
+      <DependentUpon>ModelBulat.tt</DependentUpon>
       <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ListPerformance.cs">
+      <DependentUpon>ModelBulat.tt</DependentUpon>
       <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Model1.Context.cs">
@@ -100,6 +105,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DB\ModelBulat.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBulat.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelBulat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBulat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelBulat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBulat.edmx</DependentUpon>
+    </Compile>
     <Compile Include="DB\Model3.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -116,27 +136,37 @@
       <DependentUpon>Model3.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\Role.cs">
+      <DependentUpon>ModelBulat.tt</DependentUpon>
       <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\sysdiagrams.cs">
+      <DependentUpon>ModelBulat.tt</DependentUpon>
       <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Task.cs">
+      <DependentUpon>ModelBulat.tt</DependentUpon>
       <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Training.cs">
+      <DependentUpon>ModelBulat.tt</DependentUpon>
       <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\TrainingSchedule.cs">
+      <DependentUpon>ModelBulat.tt</DependentUpon>
       <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\User.cs">
+      <DependentUpon>ModelBulat.tt</DependentUpon>
       <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AddTrainingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AcceptApplication.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -169,8 +199,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\TrainingSchedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AddTrainingPage.xaml.cs">
+      <DependentUpon>AddTrainingPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AcceptApplication.xaml.cs">
       <DependentUpon>AcceptApplication.xaml</DependentUpon>
     </Compile>
@@ -195,6 +232,9 @@
     <Compile Include="Pages\TasksPage.xaml.cs">
       <DependentUpon>TasksPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TrainingSchedule.xaml.cs">
+      <DependentUpon>TrainingSchedule.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -218,6 +258,13 @@
     </EntityDeploy>
     <None Include="DB\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="DB\ModelBulat.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelBulat.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\ModelBulat.edmx.diagram">
+      <DependentUpon>ModelBulat.edmx</DependentUpon>
     </None>
     <EntityDeploy Include="DB\Model3.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -245,6 +292,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\ModelBulat.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelBulat.edmx</DependentUpon>
+      <LastGenOutput>ModelBulat.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\ModelBulat.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelBulat.edmx</DependentUpon>
+      <LastGenOutput>ModelBulat.cs</LastGenOutput>
     </Content>
     <Content Include="DB\Model3.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
