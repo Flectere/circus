@@ -33,14 +33,18 @@ namespace circus.Pages
                 TasksLv.ItemsSource = ConnectionDB.circus.Task.ToList();
                 AddBt.Visibility = Visibility.Visible;
             }
-                
-                DataContext = this;
+            DataContext = this;
         }
 
         private void TasksLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             App.selectedTask = (DB.Task)TasksLv.SelectedItem;
             NavigationService.Navigate(new EnterTaskPage());
+        }
+
+        private void AddBt_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new CreateTaskPage());
         }
     }
 }

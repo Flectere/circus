@@ -12,28 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using circus.DB;
 
 namespace circus.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ChoiceAdminMove.xaml
+    /// Логика взаимодействия для CreateApplication.xaml
     /// </summary>
-    public partial class ChoiceAdminMove : Page
+    public partial class CreateApplication : Page
     {
-        public ChoiceAdminMove()
+        public CreateApplication()
         {
             InitializeComponent();
         }
-
-        private void TaskBt_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new TasksPage());
-        }
-        private void ScheduleTrainingBt_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new TrainingSchedule());
-        }
-
     }
 }

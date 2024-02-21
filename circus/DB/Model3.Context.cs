@@ -13,10 +13,10 @@ namespace circus.DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CircusLiana320Entities : DbContext
+    public partial class CircusLiana320Entities3 : DbContext
     {
-        public CircusLiana320Entities()
-            : base("name=CircusLiana320Entities")
+        public CircusLiana320Entities3()
+            : base("name=CircusLiana320Entities3")
         {
         }
     
@@ -26,7 +26,7 @@ namespace circus.DB
         }
     
         public virtual DbSet<AnimalCell> AnimalCell { get; set; }
-
+        public virtual DbSet<Application> Application { get; set; }
         public virtual DbSet<Gender> Gender { get; set; }
         public virtual DbSet<ListPerformance> ListPerformance { get; set; }
         public virtual DbSet<Role> Role { get; set; }

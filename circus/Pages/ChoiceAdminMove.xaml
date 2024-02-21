@@ -8,21 +8,25 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ChoiceAdminMove">
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Button BorderBrush="White"
-                Name="AnimalOrHumanBt">Добавить животного/пользователя</Button>
+   <Grid>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <Button BorderBrush="White"
+            Name="AnimalOrHumanBt">Добавить животного/пользователя</Button>
 
-        <Button Grid.Column="1"
-                BorderBrush="White"
-                Name="ScheduleArtistBt">Расписание артистов</Button>
+    <Button Grid.Column="1"
+            BorderBrush="White"
+            Name="ScheduleArtistBt">Расписание артистов</Button>
 
-        <Button Grid.Column="2"
-                BorderBrush="White"
-                Name="TaskBt" Click="TaskBt_Click">Задания</Button>
-    </Grid>
+    <Button Grid.Column="2"
+            BorderBrush="White"
+            Name="TaskBt" Click="TaskBt_Click">Задания</Button>
+    <Button Grid.Column="3"
+    BorderBrush="White"
+        Name="ScheduleTrainingBt" Click="ScheduleTrainingBt_Click">Расписание тренировок</Button>
+</Grid>
 </Page>

@@ -16,5 +16,6 @@ namespace circus
     {
         public static User currentUser;
         public static DB.Task selectedTask;
+        
     }
 }

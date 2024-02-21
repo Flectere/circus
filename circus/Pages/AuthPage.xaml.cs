@@ -43,11 +43,14 @@ namespace circus.Pages
                 {
                     NavigationService.Navigate(new ChoiceAdminMove());
                 }
+                else if (App.currentUser.IdRole == 2)
+                {
+                    NavigationService.Navigate(new ArtistSchedulePage());
+                }
                 else
                 {
                     MessageBox.Show("Такого пользователя не существует.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-                
             }
             catch
             {
@@ -55,4 +58,5 @@ namespace circus.Pages
             }
         }
     }
+    
 }

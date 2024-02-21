@@ -12,20 +12,14 @@ namespace circus.DB
     using System;
     using System.Collections.Generic;
     
-    public partial class Trainer
+    public partial class Application
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Trainer()
-        {
-            this.AnimalCell = new HashSet<AnimalCell>();
-        }
-    
         public int ID { get; set; }
-        public string Name { get; set; }
-        public Nullable<int> IdGender { get; set; }
+        public Nullable<int> idUser { get; set; }
+        public string NamePerformance { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<bool> done { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AnimalCell> AnimalCell { get; set; }
-        public virtual Gender Gender { get; set; }
+        public virtual User User { get; set; }
     }
 }
