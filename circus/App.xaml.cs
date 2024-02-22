@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Application = System.Windows.Application;
 
 namespace circus
 {
@@ -16,6 +17,8 @@ namespace circus
     {
         public static User currentUser;
         public static DB.Task selectedTask;
-        
+        public static int GoEdit = 0;
+        public static ListPerformance selectedPerformance;
+        public static DB.Application selectedApplication;
     }
 }

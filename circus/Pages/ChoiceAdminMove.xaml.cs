@@ -35,5 +35,10 @@ namespace circus.Pages
         {
             NavigationService.Navigate(new TrainingSchedule());
         }
+
+        private void ScheduleArtistBt_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ListApplications());
+        }
     }
 }

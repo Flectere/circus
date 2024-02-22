@@ -23,6 +23,43 @@ namespace circus.Pages
         public CreateApplication()
         {
             InitializeComponent();
+            if (App.GoEdit == 1)
+            {
+                NamePageTb.Text = "ИЗМЕНИТЬ ДАННЫЕ";
+                NameTb.Text = App.selectedPerformance.NamePerformance;
+                TrainingDateDp.SelectedDate = App.selectedPerformance.Date;
+            }
+            else if (App.GoEdit == 0)
+                NamePageTb.Text = "ОТПРАВИТЬ ЗАЯВКУ";
+        }
+
+        private void AddTrainingBt_Click(object sender, RoutedEventArgs e)
+        {
+            if (App.GoEdit == 0)
+            {
+                DB.Application application = new DB.Application();
+                application.Date = TrainingDateDp.SelectedDate;
+                application.NamePerformance = NameTb.Text;
+                application.idUser = App.currentUser.ID;
+                application.done = false;
+                DB.ConnectionDB.circus.Application.Add(application);
+                DB.ConnectionDB.circus.SaveChanges();
+                NavigationService.Navigate(new ArtistSchedulePage());
+            }
+            else if (App.GoEdit == 1)
+            {
+                App.selectedPerformance.Date = TrainingDateDp.SelectedDate;
+                App.selectedPerformance.NamePerformance = NameTb.Text;
+                App.GoEdit = 0;
+                DB.ConnectionDB.circus.SaveChanges();
+                NavigationService.Navigate(new ArtistSchedulePage());
+            }
+        }
+
+        private void GoBackBt_Click(object sender, RoutedEventArgs e)
+        {
+            App.GoEdit = 0;
+            NavigationService.Navigate(new ArtistSchedulePage());
         }
     }
 }

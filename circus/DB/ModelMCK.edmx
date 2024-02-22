@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище CircusLianaNormalModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище CircusLianaNormalModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AnimalCell">
           <Key>
             <PropertyRef Name="ID" />
@@ -75,6 +75,7 @@
           <Property Name="Date" Type="date" />
           <Property Name="IdTraining" Type="int" />
           <Property Name="IdAnimal" Type="int" />
+          <Property Name="done" Type="bit" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -226,8 +227,7 @@
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CircusLianaNormalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -312,6 +312,7 @@
           <Property Name="IdAnimal" Type="Int32" />
           <NavigationProperty Name="AnimalCell" Relationship="Self.FK_TrainingSchedule_AnimalCell" FromRole="TrainingSchedule" ToRole="AnimalCell" />
           <NavigationProperty Name="Training" Relationship="Self.FK_TrainingSchedule_Training" FromRole="TrainingSchedule" ToRole="Training" />
+          <Property Name="done" Type="Boolean" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -546,6 +547,7 @@
           <EntitySetMapping Name="TrainingSchedule">
             <EntityTypeMapping TypeName="CircusLianaNormalModel.TrainingSchedule">
               <MappingFragment StoreEntitySet="TrainingSchedule">
+                <ScalarProperty Name="done" ColumnName="done" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="IdTraining" ColumnName="IdTraining" />

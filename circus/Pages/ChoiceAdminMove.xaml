@@ -20,7 +20,7 @@
 
     <Button Grid.Column="1"
             BorderBrush="White"
-            Name="ScheduleArtistBt">Расписание артистов</Button>
+            Name="ScheduleArtistBt" Click="ScheduleArtistBt_Click">Расписание артистов</Button>
 
         <Button Grid.Column="2"
                 BorderBrush="White"

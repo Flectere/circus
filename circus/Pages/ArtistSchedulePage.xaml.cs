@@ -43,7 +43,14 @@ namespace circus.Pages
 
         private void ScheduleLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            NavigationService.Navigate(new EnterTaskPage());
+            App.GoEdit = 1;
+            App.selectedPerformance = ScheduleLv.SelectedItem as ListPerformance;
+            NavigationService.Navigate(new CreateApplication());
+        }
+
+        private void RefreshBt_Click(object sender, RoutedEventArgs e)
+        {
+            ScheduleLv.Items.Refresh();
         }
     }
 }
