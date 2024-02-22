@@ -21,7 +21,6 @@ namespace circus.DB
             this.Application = new HashSet<Application>();
             this.ListPerformance = new HashSet<ListPerformance>();
             this.Task = new HashSet<Task>();
-            this.AnimalCell = new HashSet<AnimalCell>();
         }
     
         public int ID { get; set; }
@@ -40,7 +39,5 @@ namespace circus.DB
         public virtual Role Role { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Task> Task { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AnimalCell> AnimalCell { get; set; }
     }
 }

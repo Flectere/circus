@@ -74,36 +74,22 @@
     </Compile>
     <Compile Include="DB\AnimalCell.cs">
       <DependentUpon>Model3.tt</DependentUpon>
-      <DependentUpon>ModelBulat.tt</DependentUpon>
+      <DependentUpon>ModelMCK.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Application.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>ModelMCK.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\Artist.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ConnectionDB.cs" />
     <Compile Include="DB\Gender.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>ModelMCK.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ListPerformance.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model3.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>ModelMCK.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ModelBulat.Context.cs">
       <AutoGen>True</AutoGen>
@@ -135,9 +121,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model3.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DB\ModelMCK.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMCK.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelMCK.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMCK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelMCK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMCK.edmx</DependentUpon>
+    </Compile>
     <Compile Include="DB\Role.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>ModelMCK.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\sysdiagrams.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
@@ -145,19 +146,19 @@
     </Compile>
     <Compile Include="DB\Task.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>ModelMCK.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Training.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>ModelMCK.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\TrainingSchedule.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>ModelMCK.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\User.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>ModelMCK.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -252,13 +253,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DB\Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DB\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </None>
     <EntityDeploy Include="DB\ModelBulat.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelBulat.Designer.cs</LastGenOutput>
@@ -273,6 +267,13 @@
     <None Include="DB\Model3.edmx.diagram">
       <DependentUpon>Model3.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="DB\ModelMCK.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelMCK.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\ModelMCK.edmx.diagram">
+      <DependentUpon>ModelMCK.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -283,16 +284,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
-    <Content Include="DB\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Content Include="DB\ModelBulat.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelBulat.edmx</DependentUpon>
@@ -312,6 +303,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model3.edmx</DependentUpon>
       <LastGenOutput>Model3.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\ModelMCK.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelMCK.edmx</DependentUpon>
+      <LastGenOutput>ModelMCK.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\ModelMCK.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelMCK.edmx</DependentUpon>
+      <LastGenOutput>ModelMCK.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
