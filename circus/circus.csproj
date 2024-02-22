@@ -74,19 +74,34 @@
     </Compile>
     <Compile Include="DB\AnimalCell.cs">
       <DependentUpon>Model3.tt</DependentUpon>
-      <DependentUpon>ModelMCK.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Application.cs">
-      <DependentUpon>ModelMCK.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ConnectionDB.cs" />
     <Compile Include="DB\Gender.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>ModelMCK.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ListPerformance.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>ModelMCK.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\ModelMCK.Context.cs">
       <AutoGen>True</AutoGen>
@@ -105,28 +120,36 @@
     </Compile>
     <Compile Include="DB\Role.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>ModelMCK.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Task.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>ModelMCK.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Training.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>ModelMCK.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\TrainingSchedule.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>ModelMCK.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\User.cs">
       <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>ModelMCK.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AddAnimal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddEntityPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AddTrainingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -144,6 +167,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ChoiceAdminMove.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChoiceEntity.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -173,6 +200,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AddAnimal.xaml.cs">
+      <DependentUpon>AddAnimal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEntityPage.xaml.cs">
+      <DependentUpon>AddEntityPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AddTrainingPage.xaml.cs">
       <DependentUpon>AddTrainingPage.xaml</DependentUpon>
     </Compile>
@@ -187,6 +220,9 @@
     </Compile>
     <Compile Include="Pages\ChoiceAdminMove.xaml.cs">
       <DependentUpon>ChoiceAdminMove.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChoiceEntity.xaml.cs">
+      <DependentUpon>ChoiceEntity.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\CreateApplication.xaml.cs">
       <DependentUpon>CreateApplication.xaml</DependentUpon>
@@ -227,6 +263,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelMCK.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="DB\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
     <None Include="DB\ModelMCK.edmx.diagram">
       <DependentUpon>ModelMCK.edmx</DependentUpon>
     </None>
@@ -240,6 +283,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DB\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="DB\ModelMCK.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelMCK.edmx</DependentUpon>
@@ -253,6 +306,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

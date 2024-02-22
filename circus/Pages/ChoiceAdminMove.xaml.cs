@@ -40,5 +40,10 @@ namespace circus.Pages
         {
             NavigationService.Navigate(new ListApplications());
         }
+
+        private void AnimalOrHumanBt_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ChoiceEntity());
+        }
     }
 }

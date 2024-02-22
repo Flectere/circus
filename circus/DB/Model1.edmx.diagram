@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d4adaec887264b788977c2a514e0c9b9" Name="Diagram1">
+        <EntityTypeShape EntityType="CircusModel.AnimalCell" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusModel.Application" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusModel.Gender" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusModel.ListPerformance" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusModel.Role" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusModel.Task" Width="1.5" PointX="5.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusModel.Training" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusModel.TrainingSchedule" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusModel.User" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="CircusModel.FK_AnimalCell_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusModel.FK_AnimalCell_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusModel.FK_TrainingSchedule_AnimalCell" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusModel.FK_Application_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusModel.FK_ListPerformance_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusModel.FK_Task_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusModel.FK_TrainingSchedule_Training" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

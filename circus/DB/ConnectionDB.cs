@@ -10,6 +10,7 @@ namespace circus.DB
     {
         //public static CircusLiana320Entities circus = new CircusLiana320Entities();
         //public static CircusEntities circus = new CircusEntities();
-        public static CircusEntitiesMCK circus = new CircusEntitiesMCK();
+        //public static CircusEntitiesMCK circus = new CircusEntitiesMCK();
+        public static CircusEntities1 circus = new CircusEntities1();
     }
 }

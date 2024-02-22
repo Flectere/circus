@@ -35,10 +35,6 @@ namespace circus.Pages
             DataContext = this;
         }
 
-        private void TrainingsLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         private void AddBt_Click(object sender, RoutedEventArgs e)
         {

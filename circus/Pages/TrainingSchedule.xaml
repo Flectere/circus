@@ -16,7 +16,7 @@
             <ListView 
               x:Name="TrainingsLv"
               Width="1000"
-              Height="500" SelectionChanged="TrainingsLv_SelectionChanged">
+              Height="500">
                 <ListView.View>
                     <GridView>
                         <GridView.Columns>
