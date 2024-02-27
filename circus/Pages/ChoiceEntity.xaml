@@ -12,18 +12,27 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0">
-            <Image Width="300" Source="\Images\choice.jpg"/>
-            <TextBlock HorizontalAlignment="Center" Text="Кого добавить?"/>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Name="PeopleBt" Width="100" Height="200" Margin="0,0,100,0" Click="PeopleBt_Click">
-                <Image Source="\Images\employee.jpg"/>
-            </Button>
-            <Button Name="AnimalBt" Width="100" Height="200" Click="AnimalBt_Click">
-                <Image Source="\Images\animal.jpg"/>
-            </Button>
-        </StackPanel>
+        <TextBlock HorizontalAlignment="Center" 
+                       Text="Кого добавить?" 
+                       Foreground="White"
+                       VerticalAlignment="Center"/>
+            
+        <StackPanel Grid.Row="1" 
+                Orientation="Horizontal" 
+                HorizontalAlignment="Center">
+            <Button Name="PeopleBt" 
+                    Width="200" 
+                    Height="50" 
+                    Margin="0,0,100,0" 
+                    Click="PeopleBt_Click"
+                    Content="Добавить сотрудника"/>
 
+
+            <Button Name="AnimalBt" 
+                    Width="200" 
+                    Height="50" 
+                    Click="AnimalBt_Click" 
+                    Content="Добавить животного"/>
+    </StackPanel>
     </Grid>
 </Page>

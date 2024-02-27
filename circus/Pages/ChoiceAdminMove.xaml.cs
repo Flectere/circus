@@ -43,7 +43,7 @@ namespace circus.Pages
 
         private void AnimalOrHumanBt_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ChoiceEntity());
+            NavigationService.Navigate(new ListOfemployeesPage());
         }
     }
 }

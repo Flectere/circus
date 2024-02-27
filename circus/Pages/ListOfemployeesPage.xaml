@@ -1,0 +1,76 @@
+﻿<Page x:Class="circus.Pages.ListOfemployeesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:circus.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="ListOfemployeesPage">
+
+    <Grid>
+        <StackPanel
+        Orientation="Vertical"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+            <ListView 
+              x:Name="TasksLv"
+              Width="1000"
+              Height="500">
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+
+
+                            <GridViewColumn Header="ID"
+                                    Width="280">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding ID}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn Header="Имя Фамилия"
+                                    Width="200">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding FirstName}"/>
+                                            <TextBlock Text=" "/>
+                                            <TextBlock Text="{Binding LastName}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Должность"
+                                            Width="200">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Role.Name}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button Height="50"
+                Margin="15"
+                Width="50"
+                FontSize="25"
+                HorizontalAlignment="Right"
+                Name="AddBt"
+                Visibility="Visible" Click="AddBt_Click">+</Button>
+            <Button Height="50"
+                Margin="15"
+                Width="200"
+                FontSize="25"
+                HorizontalAlignment="Right"
+                Name="AnimalBt"
+                Visibility="Visible" Click="AnimalBt_Click">Животные</Button>
+        </StackPanel>
+    </Grid>
+</Page>

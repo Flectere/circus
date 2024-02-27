@@ -190,6 +190,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ListOfAnimals.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ListOfemployeesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\TasksPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -235,6 +243,12 @@
     </Compile>
     <Compile Include="Pages\ListApplications.xaml.cs">
       <DependentUpon>ListApplications.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListOfAnimals.xaml.cs">
+      <DependentUpon>ListOfAnimals.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListOfemployeesPage.xaml.cs">
+      <DependentUpon>ListOfemployeesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TasksPage.xaml.cs">
       <DependentUpon>TasksPage.xaml</DependentUpon>
@@ -307,8 +321,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
