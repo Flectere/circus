@@ -48,10 +48,15 @@ namespace circus.Pages
             }
             else if (App.GoEdit == 1)
             {
-                App.selectedPerformance.Date = TrainingDateDp.SelectedDate;
-                App.selectedPerformance.NamePerformance = NameTb.Text;
-                App.GoEdit = 0;
+                DB.Application application = new DB.Application();
+                application.Date = TrainingDateDp.SelectedDate;
+                application.NamePerformance = NameTb.Text;
+                application.idUser = App.currentUser.ID;
+                application.done = false;
+                DB.ConnectionDB.circus.Application.Add(application);
                 DB.ConnectionDB.circus.SaveChanges();
+                App.GoEdit = 0;
+                App.GoEditOld = 1;
                 NavigationService.Navigate(new ArtistSchedulePage());
             }
         }

@@ -38,7 +38,7 @@ namespace circus.Pages
             if (App.currentUser.IdRole == 2)
                 NavigationService.Navigate(new CreateApplication());
             else
-                NavigationService.Navigate(new AcceptApplication());
+                NavigationService.Navigate(new ListApplications());
         }
 
         private void ScheduleLv_SelectionChanged(object sender, SelectionChangedEventArgs e)

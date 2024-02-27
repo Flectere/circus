@@ -39,6 +39,7 @@
                 Height="20"
                 Content="Добавить" 
                 Click="AddTrainingBt_Click"></Button>
+        
         <Button Name="GoBackBt"
                 Grid.Row="0" 
                 Width="70" 

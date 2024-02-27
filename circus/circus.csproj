@@ -73,20 +73,17 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DB\AnimalCell.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelLi.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Application.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelLi.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ConnectionDB.cs" />
     <Compile Include="DB\Gender.cs">
-      <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelLi.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ListPerformance.cs">
-      <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelLi.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -102,6 +99,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelLi.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelLi.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelLi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelLi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelLi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelLi.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\ModelMCK.Context.cs">
       <AutoGen>True</AutoGen>
@@ -119,24 +131,22 @@
       <DependentUpon>ModelMCK.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\Role.cs">
-      <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelLi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sysdiagrams.cs">
+      <DependentUpon>ModelLi.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Task.cs">
-      <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelLi.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Training.cs">
-      <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelLi.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\TrainingSchedule.cs">
-      <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelLi.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\User.cs">
-      <DependentUpon>ModelBulat.tt</DependentUpon>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelLi.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -151,10 +161,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\AddTrainingPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\AcceptApplication.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -217,9 +223,6 @@
     <Compile Include="Pages\AddTrainingPage.xaml.cs">
       <DependentUpon>AddTrainingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AcceptApplication.xaml.cs">
-      <DependentUpon>AcceptApplication.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\ArtistSchedulePage.xaml.cs">
       <DependentUpon>ArtistSchedulePage.xaml</DependentUpon>
     </Compile>
@@ -244,6 +247,7 @@
     <Compile Include="Pages\ListApplications.xaml.cs">
       <DependentUpon>ListApplications.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ListL.cs" />
     <Compile Include="Pages\ListOfAnimals.xaml.cs">
       <DependentUpon>ListOfAnimals.xaml</DependentUpon>
     </Compile>
@@ -284,6 +288,13 @@
     <None Include="DB\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="DB\ModelLi.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelLi.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\ModelLi.edmx.diagram">
+      <DependentUpon>ModelLi.edmx</DependentUpon>
+    </None>
     <None Include="DB\ModelMCK.edmx.diagram">
       <DependentUpon>ModelMCK.edmx</DependentUpon>
     </None>
@@ -306,6 +317,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\ModelLi.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelLi.edmx</DependentUpon>
+      <LastGenOutput>ModelLi.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\ModelLi.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelLi.edmx</DependentUpon>
+      <LastGenOutput>ModelLi.cs</LastGenOutput>
     </Content>
     <Content Include="DB\ModelMCK.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

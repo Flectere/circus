@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using circus.DB;
 
 namespace circus.Pages
 {
@@ -20,6 +21,7 @@ namespace circus.Pages
     /// </summary>
     public partial class ListApplications : Page
     {
+        public static List<ListPerformance> list = ConnectionDB.circus.ListPerformance.ToList();
         public ListApplications()
         {
             InitializeComponent();
@@ -28,15 +30,29 @@ namespace circus.Pages
         
         private void ApplicationLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            App.selectedApplication = ApplicationLv.SelectedItem as DB.Application;
-            App.selectedApplication.done = true;
-            DB.ListPerformance listPerformance = new DB.ListPerformance();
-            listPerformance.Date = App.selectedApplication.Date;
-            listPerformance.IdArtist = App.selectedApplication.idUser;
-            listPerformance.NamePerformance = App.selectedApplication.NamePerformance;
-            DB.ConnectionDB.circus.ListPerformance.Add(listPerformance);
-            DB.ConnectionDB.circus.SaveChanges();
-            NavigationService.Navigate(new ListApplications());
+            if (App.GoEditOld == 0)
+            {
+                App.selectedApplication = ApplicationLv.SelectedItem as DB.Application;
+                App.selectedApplication.done = true;
+                DB.ListPerformance listPerformance = new DB.ListPerformance();
+                listPerformance.Date = App.selectedApplication.Date;
+                listPerformance.IdArtist = App.selectedApplication.idUser;
+                listPerformance.NamePerformance = App.selectedApplication.NamePerformance;
+                DB.ConnectionDB.circus.ListPerformance.Add(listPerformance);
+                DB.ConnectionDB.circus.SaveChanges();
+                NavigationService.Navigate(new ListApplications());
+            }
+            else
+            {
+                App.selectedApplication = ApplicationLv.SelectedItem as DB.Application;
+                App.selectedApplication.done = true;
+                App.selectedPerformance.NamePerformance = App.selectedApplication.NamePerformance;
+                App.selectedPerformance.Date = App.selectedApplication.Date;
+                DB.ConnectionDB.circus.SaveChanges();
+                App.GoEditOld = 0;
+                NavigationService.Navigate(new ListApplications());
+            }
+            
         }
     }
 }

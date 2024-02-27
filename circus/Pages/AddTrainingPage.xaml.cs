@@ -30,7 +30,7 @@ namespace circus.Pages
         }
 
         private void AddTrainingBt_Click(object sender, RoutedEventArgs e)
-        {
+        {   
             DB.TrainingSchedule trainingSchedule = new DB.TrainingSchedule();
             trainingSchedule.AnimalCell = AnimalCb.SelectedItem as AnimalCell;
             trainingSchedule.Training = TrainingCb.SelectedItem as Training;
